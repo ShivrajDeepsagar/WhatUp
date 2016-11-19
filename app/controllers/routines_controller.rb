@@ -14,7 +14,7 @@ class RoutinesController < ApplicationController
 
   # GET /routines/new
   def new
-    @routine = Routine.new
+    @routine = current_user.routines.build
   end
 
   # GET /routines/1/edit
@@ -24,7 +24,7 @@ class RoutinesController < ApplicationController
   # POST /routines
   # POST /routines.json
   def create
-    @routine = Routine.new(routine_params)
+    @routine = current_user.routines.build(routine_params)
 
     respond_to do |format|
       if @routine.save
