@@ -61,6 +61,18 @@ class RoutinesController < ApplicationController
     end
   end
 
+  def like
+    @routine = Routine.find(params[:id])
+    @routine.like_by current_user
+    redirect_to :back
+  end
+
+  def unlike
+    @routine = Routine.find(params[:id])
+    @routine.unliked_by current_user
+    redirect_to :back
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_routine

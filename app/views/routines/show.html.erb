@@ -7,6 +7,18 @@
 <div class="page-header">
   <h4><%= @routine.routine %></h4>
 </div>
+<div class="btn-group">
+      <%= link_to like_routine_path(@routine), method: :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        Like
+        <%= @routine.get_upvotes.size %>
+      <% end %>
+      <%= link_to unlike_routine_path(@routine), method: :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-down">
+        Unlike
+        <%= @routine.get_downvotes.size %>
+      <% end %>
+</div>
 
 <%if @routine.user==current_user%>
   <div class= "btn-group">
