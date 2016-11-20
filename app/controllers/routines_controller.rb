@@ -1,6 +1,6 @@
 class RoutinesController < ApplicationController
   before_action :set_routine, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, except: [:index, :show]
   # GET /routines
   # GET /routines.json
   def index

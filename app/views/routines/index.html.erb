@@ -17,8 +17,11 @@
         <td><%= routine.title %></td>
         <td><%= routine.routine %></td>
         <td><%= link_to 'Show', routine %></td>
-        <td><%= link_to 'Edit', edit_routine_path(routine) %></td>
-        <td><%= link_to 'Destroy', routine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      
+        <%if routine.user == current_user %>
+          <td><%= link_to 'Edit', edit_routine_path(routine) %></td>
+          <td><%= link_to 'Destroy', routine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
