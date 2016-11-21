@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="page-header">
-  <h1><a><%= @routine.title %></a><br> <small>Submitted by <%= @routine.user.email %></small</h1>
+  <h1><a><%= @routine.title %></a><br> <small>Submitted by <%= @routine.user.email %></small></h1>
 </div>
 
 <div class="page-header">
@@ -19,6 +19,20 @@
         <%= @routine.get_downvotes.size %>
       <% end %>
 </div>
+<h3 class="comments_title">
+ <%= @routine.comments.count %> Comments
+</h3>
+
+<div id="comments">
+  <%= render :partial => @routine.comments%>
+</div>
+<%= simple_form_for [@routine, Comment.new]  do |f| %>
+  <div class="field">
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+  <br>
+  <%= f.submit "Add Comment", class: "btn btn-primary" %>
+<%end%>
 
 <%if @routine.user==current_user%>
   <div class= "btn-group">
