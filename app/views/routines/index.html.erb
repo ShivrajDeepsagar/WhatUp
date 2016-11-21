@@ -19,6 +19,8 @@
         Unlike
         <%= routine.get_downvotes.size %>
       <% end %>
+      <%= link_to 'Destroy', routine, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+
     </div>
   </div>
 <% end %>
