@@ -1,6 +1,6 @@
 == README
 
-This is a social interaction app, where a user can share what he did on a particular day to the world. The authorized users can like/unlike the post. 
+This is a social interaction app, where a user can share what he did on a particular day to the world. The authorized users can like/unlike or even comment on the post. 
 
 Heroku demo: https://obscure-hollows-87460.herokuapp.com
 
