@@ -1,25 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a social interaction app, where a user can share what he did on a particular day to the world. The authorized users can like/unlike the post. 
 
-Things you may want to cover:
+Heroku demo: https://obscure-hollows-87460.herokuapp.com
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 * ...
 
