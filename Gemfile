@@ -14,6 +14,8 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'acts_as_votable'
 gem 'simple_form'
+gem 'therubyracer', :platforms => :ruby
+
 
 group :development do
 	gem 'sqlite3'
